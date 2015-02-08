@@ -25,10 +25,10 @@ add_action( 'the_content_more_link', 'add_continue_wrapper', 10, 2 );
 // Register custom widget locations
 register_sidebar(
 	array(
-		'name' => __("Above Header", "testtheme"),
+		'name' => __("Social-Media-Header", "testtheme"),
 		'id' => 'socia-media-list',
-		'description' => 'Above header and menu, right aligned, use for social icons',
-		'before_widget' => "<div class='aboveheader'>",
+		'description' => ' use for social icons',
+		'before_widget' => "<div class='social-media-area'>",
 		'after_widget' => "</div>"
 	)
 );

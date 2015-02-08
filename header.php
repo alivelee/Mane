@@ -20,7 +20,11 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'my-theme' ); ?></a>
-
+	<?php
+	if ( is_dynamic_sidebar('socia-media-list') ) {
+		dynamic_sidebar('socia-media-list');
+	}
+	?><!-- Widget location to hold social icons -->
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

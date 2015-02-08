@@ -1,0 +1,81 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) + px;
+	font-size: $sizeValue + rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+// CSS Transition  //
+@mixin transition($transition-property, $transition-time, $method) {
+		-webkit-transition: $transition-property $transition-time $method;
+		-moz-transition: $transition-property $transition-time $method;
+		-ms-transition: $transition-property $transition-time $method;
+		-o-transition: $transition-property $transition-time $method;
+		transition: $transition-property $transition-time $method;
+}
+// Menu coloring
+
+@mixin child_menu_expanded(){
+	background-color: darken(saturate($color__background-sub_panel, 5%), 1%);
+	border: 1*$px solid $color__border-sub_panel;
+	border-bottom: 0;
+	box-shadow: 0 2*$px 5*$px rgba(0, 0, 0, 0.1);
+}
+
+@mixin child_menu_item(){
+	a, a:link, a:visited {
+		border: 0;
+		border-top: 1*$px solid darken($color__border-sub_panel, 2%);
+	}
+	a:hover {
+	background-color: lighten(saturate($color__background-sub_panel, 3%), 0.25%);
+	}
+}
+
+@mixin compact_menu_item(){
+	border-top: 1*$px solid $color__border-sub_panel;
+	&:hover {
+		border-bottom-color: transparent;
+		background-color: darken(saturate($color__background-sub_panel, 5%), 1%);
+	}
+}
+
+@mixin child_menu_compact(){
+	background-color: darken(saturate($color__background-sub_panel, 7%), 2%);
+}
+
+@mixin child_menu_compact_item(){
+	border-top: 1*$px solid darken($color__border-sub_panel, 2%);
+	&:hover {
+		border-bottom-color: transparent;
+		background-color: darken(saturate($color__background-sub_panel, 8%),3%);
+	}
+}
+// Featured image mixins//
+@mixin post_thumbnail(){
+	border-top: 10 * $px solid $color__link;
+	border-bottom: 10 * $px solid $color__link;
+}
+//Reading More Buttom mixins//
+@mixin more_link(){
+	background: none;
+	border-top: 3*$px solid saturate(lighten($color__link, 45%), 10%);
+	border-bottom: 3*$px solid saturate(lighten($color__link, 45%), 10%);
+	color: $color__link;
+}

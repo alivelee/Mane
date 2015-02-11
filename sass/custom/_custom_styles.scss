@@ -132,6 +132,9 @@ ul, ol {
 }
 
 .entry-title {
+	a:hover{
+			color:$color__link-hover;
+	}
 	margin-top: 0;
 	margin-bottom: $post_t_padding;
 }
@@ -159,6 +162,9 @@ ul, ol {
 		display: inline-block;
 		padding: 1em $phi * 1em;
 		margin: 2em 0 .5em 0;
+		&:hover{
+			color:$color__link-hover;
+		}
 		&:before {
 			font-family: "FontAwesome";
 			content: "\f0a4";
@@ -177,6 +183,9 @@ ul, ol {
 	margin: $post_b_padding 0 $post_b_padding / $phi 0;
 	line-height: 3em;
 	span {
+			a:hover{
+			color:$color__link-hover;
+			}
 		margin: 0 0.618em;
 		padding: 0 0.618em;
 		display: inline-block;
@@ -240,6 +249,9 @@ ul, ol {
 	margin: 0;
 	padding: 0;
 	li {
+			a:hover{
+			color:$color__link-hover;
+			}
 		padding: 1em 0 1em 2em;
 		@include widget-divider;
 		&.page_item_has_children, &.menu-item-has-children {
@@ -320,6 +332,7 @@ input.search-field {
 			opacity: 0.8;
 		}
 		&:hover, &:active {
+			color:$color__link-hover;
 			opacity: 1;
 			transform: scale(2);
 		}

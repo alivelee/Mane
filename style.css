@@ -508,12 +508,13 @@ input.search-field {
   margin: 0 auto;
   font-size: 1.25rem; }
   .social-media-area a {
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    animation-fill-mode: Both;
+    -webkit-animation-fill-mode: Both;
     margin-right: 0.6em; }
     .social-media-area a:link, .social-media-area a:visited {
-      opacity: 0.75; }
+      opacity: 0.8; }
     .social-media-area a:hover, .social-media-area a:active {
       opacity: 1;
       -webkit-transform: scale(2);

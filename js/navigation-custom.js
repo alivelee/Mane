@@ -7,16 +7,15 @@ jQuery(document).ready(function($){
   menu_ul.children('.menu-item-has-children').children('a').append('<span class="mytheme_menu_switch">+</span>');
 
   // Touch friendly expanded nav
-  // $(menu_ul + ' li span').hover(function(event){
-  $('.mytheme_menu_switch').hover(function(event){
+  // $(menu_ul + ' li span').click(function(event){
+  $('.mytheme_menu_switch').click(function(event){
 
     event.preventDefault();
 
-    // get the child of the hovered menu switch
-    var child_menu = $(this).parent().parent().children('ul').slideDown();
+    // get the child of the clicked menu switch
+    var child_menu = $(this).parent().parent().children('ul');
 
-
-    // get the parent link of the hovered menu switch
+    // get the parent link of the clicked menu switch
     var parent_link = $(this).parent();
 
     // check if it's currently open or closed
@@ -46,13 +45,14 @@ jQuery(document).ready(function($){
       $(this).html('-');
 
       return false;
+
     }
 
   });
 
-  $('.navicon').hover(function(){
-
-    if ( menu_ul.css('display') === 'none' ) {
+  $('.navicon').click(function(){
+    
+    if ( menu_ul.css('display') == 'none' ) {
 
       menu_ul.addClass('show');
       menu_ul.removeClass('closed').addClass('open');
@@ -67,4 +67,5 @@ jQuery(document).ready(function($){
     }
 
   });
+
 });
